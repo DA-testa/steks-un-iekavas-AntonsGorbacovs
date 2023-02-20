@@ -25,10 +25,16 @@ def find_mismatch(text):
 
 def main():
     text = input()
-    mismatch = find_mismatch(text)
-    if mismatch == 0:
-        print("Succes")
-    else:
+    if "F" in text:
+        for i in range(6):
+            with open(f"test/{i}") as f:
+                text = input()
+                mismatch = find_mismatch(text)
+                print(mismatch)
+
+    if "I" in text:
+        text = input()
+        mismatch = find_mismatch(text)
         print(mismatch)
 
 
